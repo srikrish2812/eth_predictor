@@ -1,0 +1,24 @@
+[project]
+name = "qbp-prep"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "arch>=8.0.0",
+    "ipykernel>=6.30.1",
+    "matplotlib>=3.10.6",
+    "mplfinance>=0.12.10b0",
+    "numpy>=2.2.6",
+    "pandas>=2.3.2",
+    "pandas-datareader>=0.10.0",
+    "pandas-ta>=0.4.71b0",
+    "python-dotenv>=1.1.1",
+    "scikit-learn>=1.7.2",
+    "scipy>=1.16.2",
+    "seaborn>=0.13.2",
+    "setuptools>=80.9.0",
+    "statsmodels>=0.14.5",
+    "torch>=2.9.1",
+    "torchvision>=0.24.1",
+]
