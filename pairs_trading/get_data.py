@@ -25,6 +25,9 @@ def check_cointegration(ticker_a, ticker_b, start_date='2015-01-01', api_key=Non
         # Fix indexes
         df_a.index = df_a.index.get_level_values('date')
         df_b.index = df_b.index.get_level_values('date')
+        
+        df_a.to_csv(f"{ticker_a}.csv")
+        df_b.to_csv(f"{ticker_b}.csv")
         data = pd.DataFrame({
             ticker_a: df_a['adjClose'],
             ticker_b: df_b['adjClose']
@@ -54,14 +57,14 @@ def check_cointegration(ticker_a, ticker_b, start_date='2015-01-01', api_key=Non
 # 1
 check_cointegration('GOOGL', 'GOOG', api_key=TIINGO_API_KEY)
 
-# 2. The "ETF" Pair
-check_cointegration('SPY', 'VOO', api_key=TIINGO_API_KEY)
+# # 2. The "ETF" Pair
+# check_cointegration('SPY', 'VOO', api_key=TIINGO_API_KEY)
 
-# 3. energy pairs
-check_cointegration('XOM', 'CVX', api_key=TIINGO_API_KEY)
+# # 3. energy pairs
+# check_cointegration('XOM', 'CVX', api_key=TIINGO_API_KEY)
 
-# 4.
-check_cointegration('T', 'VZ', api_key=TIINGO_API_KEY)
+# # 4.
+# check_cointegration('T', 'VZ', api_key=TIINGO_API_KEY)
 
-# 5.
-check_cointegration('AAPL', 'MSFT', api_key=TIINGO_API_KEY)
+# # 5.
+# check_cointegration('AAPL', 'MSFT', api_key=TIINGO_API_KEY)
